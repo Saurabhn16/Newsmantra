@@ -1,0 +1,97 @@
+div.navbar-container {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 319px;
+    display: table;
+    margin: 0 auto;
+    transform: translateY(-50%);
+  }
+  
+  div.navbar-container nav a {
+    position: relative;
+    width: 33.333%;
+    display: table-cell;
+    text-align: center;
+    color: #949494;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: 0.2s ease color;
+  }
+  
+  div.navbar-container nav a:before,
+  div.navbar-container nav a:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.2s ease transform;
+  }
+  
+  div.navbar-container nav a:before {
+    top: 0;
+    left: 10px;
+    width: 6px;
+    height: 6px;
+  }
+  
+  div.navbar-container nav a:after {
+    top: 5px;
+    left: 18px;
+    width: 4px;
+    height: 4px;
+  }
+  
+  div.navbar-container nav a:nth-child(1):before {
+    background-color: yellow;
+  }
+  
+  div.navbar-container nav a:nth-child(1):after {
+    background-color: red;
+  }
+  
+  div.navbar-container nav a:nth-child(2):before {
+    background-color: #00e2ff;
+  }
+  
+  div.navbar-container nav a:nth-child(2):after {
+    background-color: #89ff00;
+  }
+  
+  div.navbar-container #indicator {
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: 0.2s ease left;
+  }
+  
+  div.navbar-container nav a:hover {
+    color: #fff;
+  }
+  
+  div.navbar-container nav a:hover:before,
+  div.navbar-container nav a:hover:after {
+    transform: scale(1);
+  }
+  
+  div.navbar-container nav a:nth-child(1):hover ~ #indicator {
+    background: linear-gradient(130deg, yellow, red);
+  }
+  
+  div.navbar-container nav a:nth-child(2):hover ~ #indicator {
+    left: 34%;
+    background: linear-gradient(130deg, #00e2ff, #89ff00);
+  }
+  
+  div.navbar-container nav a:nth-child(3):hover ~ #indicator {
+    left: 70%;
+    background: linear-gradient(130deg, purple, palevioletred);
+  }
+  
